@@ -15,14 +15,16 @@ public class MarsRover {
     }
 
     public void executeCommand(Command givenCommand) {
-        if (givenCommand.equals(Command.MOVE)) {
-            new CommandImplementations(location).move();
-        }
-        if (givenCommand.equals(Command.TURN_LEFT)) {
-            new CommandImplementations(location).turnLeft();
-        }
-        if (givenCommand.equals(Command.TURN_RIGHT)) {
-            new CommandImplementations(location).turnRight();
+        switch (givenCommand) {
+            case MOVE:
+                new CommandImplementations(location).move();
+                break;
+            case TURN_LEFT:
+                new CommandImplementations(location).turnLeft();
+                break;
+            case TURN_RIGHT:
+                new CommandImplementations(location).turnRight();
+                break;
         }
     }
 
