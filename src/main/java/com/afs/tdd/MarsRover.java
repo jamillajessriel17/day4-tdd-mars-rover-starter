@@ -1,11 +1,17 @@
 package com.afs.tdd;
 
+import java.util.List;
+
 public class MarsRover {
 
     private Location location;
 
     public MarsRover(Location location) {
         this.location = location;
+    }
+
+    public void executeBatchCommands(List<Command> commandList){
+
     }
 
     public void executeCommand(Command givenCommand) {
