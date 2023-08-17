@@ -28,16 +28,16 @@ public class CommandImplementations {
 
         switch (location.getDirection()) {
             case NORTH:
-                location.setDirection(Direction.WEST);
+                setDirection(Direction.WEST);
                 break;
             case SOUTH:
-                location.setDirection(Direction.EAST);
+                setDirection(Direction.EAST);
                 break;
             case EAST:
-                location.setDirection(Direction.NORTH);
+                setDirection(Direction.NORTH);
                 break;
             case WEST:
-                location.setDirection(Direction.SOUTH);
+                setDirection(Direction.SOUTH);
                 break;
         }
     }
@@ -45,17 +45,21 @@ public class CommandImplementations {
     public void turnRight() {
         switch (location.getDirection()) {
             case NORTH:
-                location.setDirection(Direction.EAST);
+                setDirection(Direction.EAST);
                 break;
             case SOUTH:
-                location.setDirection(Direction.WEST);
+                setDirection(Direction.WEST);
                 break;
             case EAST:
-                location.setDirection(Direction.SOUTH);
+                setDirection(Direction.SOUTH);
                 break;
             case WEST:
-                location.setDirection(Direction.NORTH);
+                setDirection(Direction.NORTH);
                 break;
         }
     }
+    public void setDirection(Direction direction){
+        location.setDirection(direction);
+    }
+
 }
