@@ -40,6 +40,14 @@ public class MarsRover {
                     break;
             }
         }
+        if (givenCommand.equals(Command.TURN_RIGHT)) {
+            switch (location.getDirection()) {
+                case NORTH:
+                    location.setDirection(Direction.EAST);
+                    break;
+            }
+
+        }
     }
 
     public Location getCurrentLocation() {
