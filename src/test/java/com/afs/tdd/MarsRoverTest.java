@@ -176,7 +176,7 @@ class MarsRoverTest {
         Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
     }
     @Test
-    void should_change_to_location_1_1_W_when_executeBatchCommands_given_0_0_N_and_command_move_turn_left_move_turn_right() {
+    void should_change_to_location_negative1_1_W_when_executeBatchCommands_given_0_0_N_and_command_move_turn_left_move_turn_right() {
         // Given
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         List<Command> commandList = new ArrayList<>();
