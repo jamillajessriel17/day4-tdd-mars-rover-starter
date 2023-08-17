@@ -4,30 +4,32 @@ import java.util.List;
 
 public class MarsRover {
 
-    private Location location;
+    private final Location location;
 
     public MarsRover(Location location) {
         this.location = location;
     }
 
-    public void executeBatchCommands(List<Command> commandList){
+    public void executeBatchCommands(List<Command> commandList) {
         commandList.forEach(this::executeCommand);
-
     }
 
     public void executeCommand(Command givenCommand) {
-        if (givenCommand == Command.MOVE) {
-            if (location.getDirection() == Direction.NORTH) {
-                location.setY(location.getY() + 1);
-            }
-            if (location.getDirection() == Direction.SOUTH) {
-                location.setY(location.getY() - 1);
-            }
-            if (location.getDirection() == Direction.EAST) {
-                location.setX(location.getX() + 1);
-            }
-            if (location.getDirection() == Direction.WEST) {
-                location.setX(location.getX() - 1);
+        if (givenCommand.equals(Command.MOVE)) {
+            switch (location.getDirection()) {
+                case NORTH:
+                    location.setY(location.getY() + 1);
+                    break;
+                case SOUTH:
+                    location.setY(location.getY() - 1);
+                    break;
+                case EAST:
+                    location.setX(location.getX() + 1);
+                    break;
+                case WEST:
+                    location.setX(location.getX() - 1);
+                    break;
+
             }
         }
         if (givenCommand.equals(Command.TURN_LEFT)) {
