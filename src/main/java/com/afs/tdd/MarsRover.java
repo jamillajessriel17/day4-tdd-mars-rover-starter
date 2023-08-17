@@ -23,17 +23,19 @@ public class MarsRover {
                 location.setX(location.getX() - 1);
             }
         }
-        if(givenCommand.equals(Command.TURN_LEFT)){
-            if(location.getDirection() == Direction.NORTH){
-                location.setDirection(Direction.WEST);
+           if(givenCommand.equals(Command.TURN_LEFT)){
+
+               switch (location.getDirection()){
+                   case NORTH: location.setDirection(Direction.WEST);
+                   break;
+                   case SOUTH: location.setDirection(Direction.EAST);
+                   break;
+                   case EAST:  location.setDirection(Direction.NORTH);
+                   break;
+
+               }
             }
-            if(location.getDirection() == Direction.SOUTH){
-                location.setDirection(Direction.EAST);
-            }
-            if(location.getDirection() == Direction.EAST){
-                location.setDirection(Direction.NORTH);
-            }
-        }
+
     }
 
     public Location getCurrentLocation() {
