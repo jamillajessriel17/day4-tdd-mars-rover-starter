@@ -35,7 +35,7 @@ class MarsRoverTest {
     @Test
     void should_change_to_location_1_0_E_when_executeCommand_given_0_0_East_and_command_Move() {
         // Given
-        Location initialLocation = new Location(0, 0, Direction.NORTH);
+        Location initialLocation = new Location(0, 0, Direction.EAST);
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
