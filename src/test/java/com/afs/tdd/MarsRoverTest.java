@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class MarsRoverTest {
+    //TODO: create methods to avoid redundancy of code e.g. for preparing given and assertion
     @Test
     void should_change_to_location_0_1_N_when_executeCommand_given_0_0_North_and_command_Move() {
         // Given

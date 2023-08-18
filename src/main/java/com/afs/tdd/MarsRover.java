@@ -14,6 +14,7 @@ public class MarsRover {
         commandList.forEach(this::executeCommand);
     }
 
+    //TODO: create a local variable for new CommandImplementation since all the cases use it for less redundancy
     public void executeCommand(Command givenCommand) {
         switch (givenCommand) {
             case MOVE:
